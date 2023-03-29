@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}
+Stemformulier
+{% endblock %}
+
+{% block contents %}
+<h1>Welkom bij de Waterschapsverkiezingen</h1>
+<form method="post" action="/vote">
+    {{ form.hidden_tag() }}
+    <div class="mb-3">
+        {{ form.name.label }} {{ form.name }}
+    </div>
+    <div class="mb-3">
+        {{ form.party.label }} {{ form.party }}
+    </div>
+    {{ form.submit() }}
+</form>
+{% endblock %}
