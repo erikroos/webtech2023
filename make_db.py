@@ -1,4 +1,5 @@
-from elections import db, app, Party
+from electionapp import db, app
+from electionapp.models import Party
 
 with app.app_context():
     db.create_all()

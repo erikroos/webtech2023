@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+Overzicht
+{% endblock %}
+
+{% block contents %}
+
+<h1>De stemmen tot nu toe:</h1>
+<ul>
+    {% for vote in votes %}
+        <li>{{ vote }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

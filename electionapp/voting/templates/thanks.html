@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}
+Bedankt
+{% endblock %}
+
+{% block contents %}
+
+<a class="btn btn-primary" href="{{ url_for('index') }}">Terug naar Home</a>
+<a class="btn btn-primary" href="{{ url_for('admin.login') }}">Log in</a>
+
+{% endblock %}

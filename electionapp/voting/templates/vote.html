@@ -6,7 +6,7 @@ Stemformulier
 
 {% block contents %}
 <h1>Welkom bij de Waterschapsverkiezingen</h1>
-<form method="post" action="/vote">
+<form method="post" action="{{ url_for('voting.vote') }}">
     {{ form.hidden_tag() }}
     <div class="mb-3">
         {{ form.name.label }} {{ form.name }}
