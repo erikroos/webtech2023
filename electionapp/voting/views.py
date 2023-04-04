@@ -1,6 +1,6 @@
 from electionapp import db
 from flask import Blueprint, render_template, redirect, request, url_for, flash
-from electionapp.models import Vote, Party, Voter
+from electionapp.voting.models import Vote, Party, Voter
 from electionapp.voting.forms import VotingForm
 
 voting_blueprint = Blueprint('voting', __name__, template_folder='templates')

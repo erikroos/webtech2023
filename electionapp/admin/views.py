@@ -1,7 +1,8 @@
 from electionapp import db
 from flask import Blueprint, render_template, redirect, request, url_for, flash
 from flask_login import login_user, login_required, logout_user
-from electionapp.models import User, Vote
+from electionapp.admin.models import User
+from electionapp.voting.models import Vote
 from electionapp.admin.forms import LoginForm, RegistrationForm
 
 admin_blueprint = Blueprint('admin', __name__, template_folder='templates')

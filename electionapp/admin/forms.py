@@ -2,7 +2,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired, EqualTo
 from wtforms import ValidationError
-from electionapp.models import User
+from electionapp.admin.models import User
 
 class RegistrationForm(FlaskForm):
     username = StringField('Gebruikersnaam', validators=[DataRequired()])
