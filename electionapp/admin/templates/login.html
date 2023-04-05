@@ -6,15 +6,19 @@ Inloggen
 
 {% block contents %}
 
-<form method="POST">
+<form method="post" action="/admin/login">
     {{ form.hidden_tag() }}
-    <div class="mb-3">
-        {{ form.username.label }} {{ form.username }}
+    <div class="mb-3 formgroup">
+        <div class="formlabel">{{ form.username.label }}</div>
+        <div class="forminput">{{ form.username }}</div>
     </div>
-    <div class="mb-3">
-        {{ form.password.label }} {{ form.password }}
+    <div class="mb-3 formgroup">
+        <div class="formlabel">{{ form.password.label }}</div>
+        <div class="forminput">{{ form.password }}</div>
     </div>
-    {{ form.submit() }}
+    <div class="mb-3 formgroup">
+        <input type="submit" class="btn btn-primary" value="Login">
+    </div>
 </form>
 
 {% endblock %}

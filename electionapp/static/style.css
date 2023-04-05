@@ -1,0 +1,13 @@
+.formlabel {
+    width: 200px;
+    float: left;
+}
+
+.forminput {
+    float: left;
+}
+
+.formgroup {
+    padding-top: 10px;
+    clear: left;
+}

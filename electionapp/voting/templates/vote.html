@@ -7,13 +7,16 @@ Stemformulier
 {% block contents %}
 <h1>Welkom bij de Waterschapsverkiezingen</h1>
 <form method="post" action="{{ url_for('voting.vote') }}">
-    {{ form.hidden_tag() }}
-    <div class="mb-3">
-        {{ form.name.label }} {{ form.name }}
+    <div class="mb-3 formgroup">
+        <div class="formlabel">{{ form.name.label }}</div>
+        <div class="forminput">{{ form.name }}</div>
     </div>
-    <div class="mb-3">
-        {{ form.party.label }} {{ form.party }}
+    <div class="mb-3 formgroup">
+        <div class="formlabel">{{ form.party.label }}</div>
+        <div class="forminput">{{ form.party }}</div>
     </div>
-    {{ form.submit() }}
+    <div class="mb-3 formgroup">
+        <input type="submit" class="btn btn-primary" value="Stem">
+    </div>
 </form>
 {% endblock %}

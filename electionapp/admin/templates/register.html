@@ -6,18 +6,23 @@ Registreren
 
 {% block contents %}
 
-<form method="POST">
+<form method="post" action="/admin/register">
     {{ form.hidden_tag() }}
-    <div class="mb-3">
-        {{ form.username.label }} {{ form.username }}
+    <div class="mb-3 formgroup">
+        <div class="formlabel">{{ form.username.label }}</div>
+        <div class="forminput">{{ form.username }}</div>
     </div>
-    <div class="mb-3">
-        {{ form.password.label }} {{ form.password }}
+    <div class="mb-3 formgroup">
+        <div class="formlabel">{{ form.password.label }}</div>
+        <div class="forminput">{{ form.password }}</div>
     </div>
-    <div class="mb-3">
-        {{ form.pass_confirm.label }} {{ form.pass_confirm }}
+    <div class="mb-3 formgroup">
+        <div class="formlabel">{{ form.pass_confirm.label }}</div>
+        <div class="forminput">{{ form.pass_confirm }}</div>
     </div>
-    {{ form.submit() }}
+    <div class="mb-3 formgroup">
+        <input type="submit" class="btn btn-primary" value="Registreer">
+    </div>
 </form>
 
 {% endblock %}

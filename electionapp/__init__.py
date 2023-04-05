@@ -19,7 +19,7 @@ login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = "admin.login"
 
-# 4. Registring blueprints goes last! (blueprints are used to put routes (views) and forms that belong together into separate sections)
+# 4. Registring blueprints goes last! (blueprints are used to put routes (views), models and forms that belong together into separate sections)
 from electionapp.admin.views import admin_blueprint
 app.register_blueprint(admin_blueprint, url_prefix="/admin")
 
