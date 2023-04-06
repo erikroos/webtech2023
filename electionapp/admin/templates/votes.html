@@ -7,6 +7,7 @@ Overzicht
 {% block contents %}
 
 <h1>De stemmen tot nu toe</h1>
+<div class="votecontainer">
 {% for party in votes.keys() %}
     <div name="{{ party }}">
         <h2>{{ party }}</h2>
@@ -17,5 +18,6 @@ Overzicht
         </ul>
     </div>
 {% endfor %}
+</div>
 
 {% endblock %}

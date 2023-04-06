@@ -16,8 +16,7 @@ def form():
 def vote():
     form = VotingForm()
     form.party.choices = [(p.id, p.name) for p in Party.query.order_by('name')]
-
-    if form.validate_on_submit() and form.name.data != "":
+    if form.validate_on_submit():
         # Add to db
         voter = Voter(form.name.data)
         db.session.add(voter)
@@ -29,7 +28,6 @@ def vote():
         db.session.commit()
 
         flash(f"Bedankt {form.name.data}, voor uw stem!")
-
         return redirect(url_for("voting.thanks"))
     else:
         flash("Ongeldige stem")

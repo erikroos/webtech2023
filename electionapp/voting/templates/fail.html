@@ -5,11 +5,5 @@ Mislukt
 {% endblock %}
 
 {% block contents %}
-{% for message in get_flashed_messages() %}
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-        {{ message }}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-{% endfor %}
-<p><a href="{{ url_for('index') }}">Probeer het opnieuw</a></p>
+<p><a class="btn btn-primary" href="{{ url_for('index') }}">Probeer het opnieuw</a></p>
 {% endblock %}

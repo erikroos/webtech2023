@@ -11,3 +11,12 @@
     padding-top: 10px;
     clear: left;
 }
+
+.votecontainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.votecontainer div {
+    width: 33%;
+}
